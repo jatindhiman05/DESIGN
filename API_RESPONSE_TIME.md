@@ -1,6 +1,6 @@
 # API Response Time
 
-## 1. What is an API?
+## What is an API?
 
 Before understanding response time, you must know what an API is:
 
@@ -10,7 +10,7 @@ It takes your request, delivers it to the server, and returns the server's respo
 
 **Example:** When you open Instagram and tap a post, your app requests the post via Instagram's API. The API fetches it from servers and displays it in your app.
 
-## 2. API Response Time — Definition
+## API Response Time — Definition
 
 API Response Time is the total time taken for:
 
@@ -26,7 +26,7 @@ API Response Time = API Latency + Server Processing Time
 - **API Latency:** Time for the request/response to travel over the network.
 - **Server Processing Time:** Time the server takes to process the request.
 
-## 3. API Response Time vs API Latency
+## API Response Time vs API Latency
 
 Many beginners confuse these two. Here's a restaurant analogy:
 
@@ -43,7 +43,7 @@ Many beginners confuse these two. Here's a restaurant analogy:
 ✅ **Key takeaway:**
 Latency is network delay, response time = latency + server processing.
 
-## 4. Why API Response Time Matters
+## Why API Response Time Matters
 
 It directly impacts user experience.
 
@@ -55,7 +55,7 @@ It directly impacts user experience.
 - Chat apps → delayed messages frustrate users.
 - Data-heavy apps → slow queries reduce usability.
 
-## 5. Factors Affecting API Response Time
+## Factors Affecting API Response Time
 
 ### A. Network Factors
 
@@ -99,7 +99,7 @@ It directly impacts user experience.
 - Use compression to minimize payload size.
 - Optimize database indexing, queries, and server logic.
 
-## 6. Measuring API Response Time
+## Measuring API Response Time
 
 **Common metrics:**
 
@@ -109,7 +109,7 @@ It directly impacts user experience.
 
 **Example:** P95 = 95% of requests responded faster than X ms.
 
-## 7. Summary Table
+## Summary Table
 
 | Concept | Definition | Restaurant Analogy |
 |---------|------------|-------------------|
@@ -117,7 +117,7 @@ It directly impacts user experience.
 | API Latency | Travel/communication delay | Waiter going to kitchen and back |
 | Server Processing Time | Time server takes to process request | Chef cooking the food |
 
-## 8. Tips to Improve API Response Time
+## Tips to Improve API Response Time
 
 - Use CDNs / edge servers → reduce distance to users.
 - Implement caching → serve repeated requests faster.
