@@ -1,4 +1,4 @@
-# API Response Time — Complete Guide
+# API Response Time
 
 ## 1. What is an API?
 
