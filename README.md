@@ -156,3 +156,102 @@ CAP Theorem is a guiding principle for designing distributed systems. It reminds
 > **“When a network partition occurs, you must choose between Consistency and Availability.”**
 
 This helps architects make informed trade-offs depending on the system’s needs — accuracy vs. uptime.
+
+
+## 🗃️ Partitioning vs. Sharding: Scaling Data
+
+While both techniques involve dividing data, they address different scale challenges and operate at different architectural levels.
+
+---
+
+### Partitioning — Splitting data within a single database
+
+**Definition:**
+Partitioning means dividing a large table into smaller, more manageable segments called **partitions** — all within the **same database instance**.
+Each partition stores a subset of the data but follows the same schema.
+
+**Why it’s done:**
+* To improve **query performance** (smaller scans).
+* To improve **manageability** (backup, archiving, indexing).
+* To enable **parallel processing** across partitions.
+
+**Example:**
+Suppose you have a massive transactions table storing all payments since 2015.
+Instead of one huge table, you create partitions by month or year, e.g., `transactions_2022`, `transactions_2023`, `transactions_2024`.
+Now a query like “fetch all 2024 transactions” hits only that partition, not the whole dataset.
+
+#### Common Partitioning Strategies
+
+| Type | How it works | Example |
+| :--- | :--- | :--- |
+| **Range Partitioning** | Split by a numeric or date range | Transactions before 2024 vs after 2024 |
+| **List Partitioning** | Split by a predefined list of values | Orders by region: Asia, Europe, US |
+| **Hash Partitioning** | Use hash of a key to evenly spread data | `hash(user_id) % 4` → 4 partitions |
+| **Composite Partitioning** | Combine two methods (e.g. range + hash) | Range by year, hash by user\_id inside each |
+
+---
+
+### Sharding — Splitting data across multiple databases
+
+**Definition:**
+Sharding is a form of **horizontal partitioning across different database servers**.
+Each shard is an **independent database** with its own hardware, storage, and compute resources.
+
+**Why it’s done:**
+* To handle **massive scale** (beyond one DB’s capacity).
+* To **distribute load** geographically.
+* To improve **fault isolation** — if one shard fails, others stay online.
+
+**Example (Facebook):**
+Facebook users in Australia are stored on Australian shards; users in the US are on US shards.
+So Australian users are served by nearby servers (**low latency**), and if one region’s DB crashes, others remain unaffected.
+
+#### Shard Key
+A **shard key** determines which shard a record belongs to.
+
+**Common choices:**
+* User ID hash (ensures even distribution)
+* Region or country (ensures locality, but may cause uneven load)
+
+> **⚠️ Note:** A bad shard key leads to imbalance or **“hot shards.”**
+
+#### Horizontal vs. Vertical Sharding
+
+| Type | Meaning | Example |
+| :--- | :--- | :--- |
+| **Horizontal Sharding** | Divide **rows** of a table across multiple DBs | Customers A–M in DB1, N–Z in DB2 |
+| **Vertical Sharding** | Divide **columns** (attributes) across multiple DBs | User profile data in DB1, user posts in DB2 |
+
+---
+
+## 🆚 Fundamental Difference
+
+| Feature | Partitioning | Sharding |
+| :--- | :--- | :--- |
+| **Scope** | **Within a single DB** | **Across multiple DBs/servers** |
+| **Goal** | Query optimization, performance tuning | **Horizontal scalability** and load distribution |
+| **Key used** | Partition key (e.g., date, ID range) | Shard key (e.g., user ID, region) |
+| **Complexity** | Easier to maintain | **Higher operational complexity** |
+| **Failure Isolation** | Same DB instance → **shared failure** | Each shard independent → **better fault isolation** |
+
+---
+
+## 🎯 When to Use Which
+
+| Use Case | Choose |
+| :--- | :--- |
+| Large tables slowing down queries | **Partitioning** |
+| Need for better data management or archiving | **Partitioning** |
+| Database size growing beyond one machine’s limits | **Sharding** |
+| Global users with geographic latency | **Sharding** |
+| High throughput & fault isolation | **Sharding** |
+
+### In Short
+
+* **Partitioning** = split data within one database for **performance**.
+* **Sharding** = split data across multiple databases for **scalability**.
+
+### Or even shorter:
+
+* **Partitioning** improves **query speed**.
+* **Sharding** improves **system scale**.
