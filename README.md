@@ -1,7 +1,6 @@
-
-| Design Topics |
-|---------------|
-| [Cap Theorm](./CAP_THEORM.md) |
-| [Partition vs Sharding](./Partition_vs_Sharding.md) |
-| [API Response Time](./API_RESPONSE_TIME.md) |
-| [Load Balancing](./Load_Balancing.md) |
+| S.No. | Concepts |
+|-------|---------------|
+| 1. | [CAP THEORM](./CAP_THEORM.md) |
+| 2. | [Partition vs Sharding](./Partition_vs_Sharding.md) |
+| 3. | [API RESPONSE TIME](./API_RESPONSE_TIME.md) |
+| 4. | [Load Balancing](./Load_Balancing.md) |
