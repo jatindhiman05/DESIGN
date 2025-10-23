@@ -9,3 +9,5 @@
 | 7. | [Scaling Horizontal and Vertical](./Scaling_Horizontal_and_Vertical.md) |
 | 8. | [Message Queue](./Message_Queue.md) |
 | 9. | [Geohashing](./Geohashing.md) |
+| 10. | [Content Delivery Network(CDN)](./Content_Delivery_Network(CDN).md) |
+
