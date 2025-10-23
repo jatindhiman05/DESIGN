@@ -13,6 +13,7 @@
 | 11. | [Buffer vs Cache](./Buffer_vs_Cache.md) |
 | 12. | [Databases: SQL, NoSQL, & NewSQL](./Databases.md) |
 | 13. | [Consistency Models](./Consistency_Models.md) |
+| 14. | [What Happens When You Hit An URL Models](./What_Happens_When_You_Hit_An_URL.md) |
 
 
 
