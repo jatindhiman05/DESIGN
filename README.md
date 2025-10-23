@@ -8,4 +8,4 @@
 | 6. | [Monolithic & Microservices Architecture](./Monolithic_and_Microservices_Architecture.md) |
 | 7. | [Scaling Horizontal and Vertical](./Scaling_Horizontal_and_Vertical.md) |
 | 8. | [Message Queue](./Message_Queue.md) |
-
+| 9. | [Geohashing](./Geohashing.md) |
