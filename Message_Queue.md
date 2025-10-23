@@ -1,4 +1,4 @@
-# 📨 Message Queues — Explained Simply and Logically
+# 📨 Message Queues
 
 ## 🔹 Why Do We Need Message Queues?
 
