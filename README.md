@@ -1,4 +1,4 @@
-| S.No. | Concepts |
+| S.No. | System Design Concepts |
 |-------|---------------|
 | 1. | [CAP THEORM](./CAP_THEORM.md) |
 | 2. | [Partition vs Sharding](./Partition_vs_Sharding.md) |
@@ -14,6 +14,9 @@
 | 12. | [Databases: SQL, NoSQL, & NewSQL](./Databases.md) |
 | 13. | [Consistency Models](./Consistency_Models.md) |
 | 14. | [What Happens When You Hit An URL](./What_Happens_When_You_Hit_An_URL.md) |
+| 15. | [Database Transaction Models](./Database_Transaction_Models.md) |
+| 16. | [Two-Phase Commit](./Two_Phase_Commit.md) |
+| 17. | [Database Replication](./Database_Replication.md) |
 
 
 
