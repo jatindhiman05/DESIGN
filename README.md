@@ -5,3 +5,6 @@
 | 3. | [API RESPONSE TIME](./API_RESPONSE_TIME.md) |
 | 4. | [Load Balancing](./Load_Balancing.md) |
 | 5. | [Consistent Hashing](./Consistent_hashing.md) |
+| 6. | [Monolithic & Microservices Architecture](./Monolithic_and_Microservices_Architecture.md) |
+
+
