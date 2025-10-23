@@ -4,3 +4,4 @@
 | 2. | [Partition vs Sharding](./Partition_vs_Sharding.md) |
 | 3. | [API RESPONSE TIME](./API_RESPONSE_TIME.md) |
 | 4. | [Load Balancing](./Load_Balancing.md) |
+| 5. | [Consistent Hashing](./Consistent_hashing.md) |
