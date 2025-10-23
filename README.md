@@ -12,6 +12,7 @@
 | 10. | [Content Delivery Network(CDN)](./Content_Delivery_Network(CDN).md) |
 | 11. | [Buffer vs Cache](./Buffer_vs_Cache.md) |
 | 12. | [Databases: SQL, NoSQL, & NewSQL](./Databases.md) |
+| 13. | [Consistency Models](./Consistency_Models.md) |
 
 
 
