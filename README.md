@@ -6,5 +6,5 @@
 | 4. | [Load Balancing](./Load_Balancing.md) |
 | 5. | [Consistent Hashing](./Consistent_hashing.md) |
 | 6. | [Monolithic & Microservices Architecture](./Monolithic_and_Microservices_Architecture.md) |
-
+| 7. | [Scaling Horizontal and Vertical](./Scaling_Horizontal_and_Vertical.md) |
 
