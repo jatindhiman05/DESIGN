@@ -1,4 +1,4 @@
-# 🧩 The Complete Guide to Message Queues in Microservices
+# 🧩 Message Queues 
 
 ## 1️⃣ Why Do We Need Message Queues?
 
